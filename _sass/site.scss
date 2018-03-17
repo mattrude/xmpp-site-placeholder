@@ -1,0 +1,445 @@
+@charset "utf-8";
+
+//$site-color: "{{ site.color }}";
+
+$site-color: #9FCF6C;
+//$site-color: #c3950d;
+
+//////////////////////////////////////////////////////////////
+
+$color-background: $site-color;
+$color-link: darken($site-color, 20%);
+
+// Buttons
+$color-btn-primary: darken($site-color, 10%);
+$color-btn-success: darken($site-color, 20%);
+$color-btn-link:    darken($site-color, 30%);
+
+
+//////////////////////////////////////////////////////////////
+
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Encode Sans Expanded', sans-serif;
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+// Links
+
+a {
+    color: $color-link;
+}
+
+a:hover {
+    color: lighten($color-link, 10%);
+    text-decoration: underline;
+}
+
+pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #f5f5f5;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+// Buttons
+
+.btn-primary {
+    color: #fff;
+    background-color: $color-btn-primary;
+    border-color: darken($color-btn-primary, 15%);
+    &:hover {
+        color: darken($color-btn-primary, 5%);
+        background-color: darken($color-btn-primary, 20%);
+        border-color: transparent;
+    }
+    &:not(:disabled):not(.disabled).active,
+    &:not(:disabled):not(.disabled):active,
+    .show > &.dropdown-toggle {
+        color: adjust-color($color-btn-primary, $blue: 20);
+        background-color: adjust-color($color-btn-primary, $blue: 10);
+        border-color: transparent;
+    }
+    &:not(:disabled):not(.disabled).active:focus,
+    &:not(:disabled):not(.disabled):active:focus,
+    .show> &.dropdown-toggle:focuas,
+    .focus,
+    &:focus {
+        box-shadow: 0 0 0 0.2rem adjust-color($color-btn-primary, $blue: 20);
+    }
+}
+
+.btn-success {
+    color: #fff;
+    background-color: $color-btn-success;
+    border-color: darken($color-btn-success, 15%);
+    :hover {
+        color: #fff;
+        background-color: darken($color-btn-success, 5%);
+        border-color: darken($color-btn-success, 20%);
+    }
+    :not(:disabled):not(.disabled).active,
+    :not(:disabled):not(.disabled):active {
+        color: adjust-color($color-btn-success, $blue: 20);
+        background-color: adjust-color($color-btn-success, $blue: 10);
+        border-color: transparent;
+    }
+}
+
+.btn-link {
+    color: #fff;
+    background-color: $color-btn-link;
+    border-color: darken($color-btn-link, 15%);
+    :hover {
+        color: #fff;
+        background-color: darken($color-btn-link, 5%);
+        border-color: darken($color-btn-link, 20%);
+    }
+    :not(:disabled):not(.disabled).active,
+    :not(:disabled):not(.disabled):active {
+        color: adjust-color($color-btn-link, $blue: 20);
+        background-color: adjust-color($color-btn-link, $blue: 10);
+        border-color: transparent;
+    }
+}
+
+// Banners
+
+.alert-warning {
+    color: darken($site-color, 30%);
+    background-color: lighten($site-color, 20%);
+    border-color: lighten($site-color, 15%);
+    a {
+        color: darken($site-color, 45%);
+        font-weight: bold;
+    }
+}
+
+.alert-info {
+    color: darken($site-color, 20%);
+    background-color: lighten($site-color, 20%);
+    border-color: lighten($site-color, 15%);
+    a {
+        color: darken($site-color, 45%);
+        font-weight: bold;
+    }
+}
+
+// Index Page
+
+#opening {
+    margin-bottom: 25px;
+    #opening-side {
+        margin:auto;
+    }
+}
+#register {
+    #feature-register {
+        background-color: #eee;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+}
+
+// New Index Page
+
+#index-jobotron {
+    padding-top: 80px;
+    border-radius: 0;
+}
+
+#server-features-index {
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 0;
+    #navbar-main {
+        padding: 80px 0 0 0;
+        margin-top: -80px;
+        background: transparent!important;
+    }
+    #nav-body {
+        color: black;
+        background: transparent!important;
+        width: 100%
+    }
+    .nav-pills .nav-link {
+        border-radius: 0;
+    }
+    .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    a {
+        color:black;
+        margin: unset!important;
+    }
+}
+
+#server-features-content {
+    .section-header {
+        padding-bottom: 25px;
+    }
+    #sections {
+        min-height: 130px;
+        #link {
+            color: #212529;
+        }
+        #link:hover + #name {
+            display: block;
+        }
+        #name {
+            display: none;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    }
+}
+// New User Guide
+
+#nug {
+    #nug-content {
+        padding: unset;
+    }
+    #nug-opening {
+        min-height:400px;
+        width: 100%;
+        padding-top: 80px;
+        span {
+            font-size: 100px;
+        }
+    }
+    .nug-feature-section {
+    }
+    #nug-nav-body {
+        width: 100%;
+    }
+    .index-section {
+        margin-right: -20%;
+        padding-right: 20%;
+    }
+    .card {
+        background-color: rgba(0,0,0,0.2);
+        a {
+            color: #fff;
+        }
+    }
+    .list-group-item {
+        background-color: unset; 
+    }
+}
+
+#nug-index {
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 0;
+    #navbar-main {
+        padding: 80px 0 0 0;
+        margin-top: -80px;
+        background: transparent!important;
+    }
+    #nav-body {
+        color: black;
+        background: transparent!important;
+        width: 100%
+    }
+    .nav-pills .nav-link {
+        border-radius: 0;
+    }
+    .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    a {
+        color:black;
+        margin: unset!important;
+    }
+}
+
+.section-header-nug {
+    padding-top: 60px;
+}
+
+// Main Site Compoints
+
+.wrapper {
+    margin-bottom: 120px;
+}
+
+.jumbotron {
+    background-color: $color-background;
+    padding: 2rem;
+}
+
+#cert-table {
+    h2 {
+        display: inline;
+    }
+    p {
+        float: right;
+    }
+}
+
+#register-window {
+    .card {
+        margin-left: 25px;
+        min-height: 472px;
+        margin-bottom: unset;
+    }
+
+    .panel-heading {
+        background-color: $site-color;
+        border-color: transparent;
+        color: darken($site-color, 60%);
+    }
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+    background-color: $site-color;
+    a {
+        color: #fff;
+    }
+    a:hover {
+        color: darken($site-color, 40%);
+        text-decoration: underline;
+    }
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.index-section {
+  padding: 100px 0 80px;
+}
+
+.index-section-last {
+  padding: 100px 0 70px;
+}
+
+.list-inline {
+  display: inline;
+}
+
+.site-title {
+  text-align: right;
+}
+
+.site-title h1 {
+  font-size: 4em;
+}
+
+#error-text {
+  margin-top: 100px;
+  text-align: center;
+}
+
+#accordion {
+  .card {
+      min-height: unset;
+      margin-bottom: unset;
+      border-radius: unset;
+      border: lighten($site-color, 25%);
+  }
+}
+
+#creating-account {
+    .jumbotron {
+        background-color: lighten($site-color, 20%);
+    }
+    #nav-body {
+        background-color: lighten($site-color, 20%)!important;
+        a {
+            color: darken($site-color, 15%);
+        }
+    }
+    .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+        color: lighten($site-color, 5%)!important;
+        background-color: darken($site-color, 10%)!important;
+    }
+}
+
+.card {
+  min-height: 600px;
+  margin-bottom: 25px;
+}
+.card-img-top {
+  width: 100px;
+  height: 100px;
+  margin: 30px auto 0;
+}
+
+.card-header {
+  background-color: lighten($site-color, 20%);
+}
+
+.contact-list {
+  font-size: 3em;
+  text-align: center;
+  padding: unset;
+}
+
+td.PASSED {
+    background-color: green;
+    color: white;
+}
+td.FAILED {
+    background-color: red;
+    color: white;
+}
+
+#definitions h2 {
+    padding-top: 60px;
+}
+
+@media (max-width: 990px) {
+  .contact-list {
+      font-size: 1.7em;
+  }
+  .client-mobile h4 {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .pull-right, .pull-left {
+      text-align: center;
+  } 
+  .site-title {
+      display: none;
+  }
+  .client-mobile h4 {
+      font-size: 1.3rem;
+  }
+  #server-features-index {
+      display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+      max-width: 960px;
+  }
+}

@@ -1,0 +1,65 @@
+---
+layout: welcome
+title: Home
+permalink: /
+---
+
+<div id="home">
+
+<!-- Opening Site Jumbo Tron -->
+
+<div id="index-jobotron" class="jumbotron">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{{ site.url }}/assets/img/xmpp_logo.png" width="233px;" height="240px;">
+            </div>
+            <div class="col-md-8 float-md-right site-title">
+                <h1>XMPP Communication Service</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Opening Section -->
+
+<div id="opening" class="container offsetanchor">
+    <div class="row">
+        <div id="opening-text" class="col-lg-7 col-md-6">
+            <p>This is the <strong>{{ site.name }}</strong> communication service.  A <a href="https://xmpp.org/">XMPP</a>
+            service provides messaging ability via a local client.  Meny XMPP servers (like this one) are
+            <a href="https://en.wikipedia.org/wiki/XMPP#Federation">federated</a>, meaning they are able to connect
+            to diffrent XMPP servers on diffrent domains, similer to how email allows you to send messages to users on other
+            domains/servers.  This service is in complete compliance with
+            <a href="https://xmpp.org/extensions/xep-0375.html">XEP-0375</a>.</p>
+
+            <p>This service requires the use of a client to connect to the server with.  Please see the
+            <a href="https://im.mattrude.com/help/clients/">client list</a> for a small list of available clients that
+            may be used.  My personal preferred clients are <a href="https://gajim.org/">Gajim</a> or
+            <a href="https://swift.im/">Swift</a> for desktop/laptops and <a href="https://conversations.im/">Conversations</a>
+            or <a href="https://chatsecure.org/">ChatSecure</a> for mobile.</p>
+        </div>
+
+        <div id="opening-side" class="col-lg-5 col-md-6 col-sm-8 col-12">
+            <h1>Connecting...</h1>
+            <ul>
+                <li>Port: <b>5222</b></li>
+                <li>Domain: <b>{{ site.xmpp-url }}</b></li>
+                <li>Server Name: <b>{{ site.xmpp-host }}</b></li>{% if site.xmpp-conference-url and site.xep-0045 == 1 %}
+                <li>Rooms: <b>{{ site.xmpp-conference-url }}</b></li>{% endif %}{% if site.xmpp-proxy-url and site.xep-0065 == 1 %}
+                <li>Socks 5 Proxy: <b>{{ site.xmpp-proxy-url }}</b></li>{% endif %}{% if site.xmpp-upload-url and site.xep-0363 == 1 %}
+                <li>File Uploads: <b>{{ site.xmpp-upload-url }}</b></li>{% endif %}
+            </ul>
+            <div style="padding-left:40px;"><a href="https://check.messaging.one/result.php?domain={{ site.xmpp-url }}&amp;type=server" target="_blank"><img src="https://check.messaging.one/badge.php?domain={{ site.xmpp-url }}" alt="check.messaging.one server score"/></a></div>
+
+        </div>
+    </div>
+</div>
+
+</div>
+
+<!-- About Section -->
+
+<div id="about" class="index-section" style="background-color:#eee;padding-bottom:80px;">
+    {% include about.html %}
+</div>
