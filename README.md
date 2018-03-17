@@ -1,6 +1,6 @@
 # Communication Service Website Source
 
-[![GitHub license](https://img.shields.io/github/license/mattrude/xmpp-site-lite.svg)](https://github.com/mattrude/xmpp-site-lite/blob/master/LICENSE) [![Open Issues](https://img.shields.io/github/issues-raw/mattrude/xmpp-site-lite.svg)](https://github.com/mattrude/xmpp-site-lite/issues) [![Maintenance](https://img.shields.io/maintenance/yes/2018.svg)](http://github.com/mattrude/xmpp-site-lite)
+[![GitHub license](https://img.shields.io/github/license/mattrude/xmpp-site-placeholder.svg)](https://github.com/mattrude/xmpp-site-placeholder/blob/master/LICENSE) [![Open Issues](https://img.shields.io/github/issues-raw/mattrude/xmpp-site-placeholder.svg)](https://github.com/mattrude/xmpp-site-placeholder/issues) [![Maintenance](https://img.shields.io/maintenance/yes/2018.svg)](http://github.com/mattrude/xmpp-site-placeholder)
 
 This is the website for a XMPP service.
 
@@ -14,7 +14,7 @@ Installing this site is no diffrent then installing anyother [Jekyll](https://je
 
 ### 1. Clone the site
 
-    git clone https://github.com/mattrude/xmpp-site-lite.git
+    git clone https://github.com/mattrude/xmpp-site-placeholder.git
     cd xmpp-site-lite
 
 ### 2. Update Dependencies
@@ -140,7 +140,7 @@ Installing this site is no diffrent then installing anyother [Jekyll](https://je
                     Version 3, 29 June 2007
 
     mattrude.com XMPP Service Website for im.mattrude.com
-    Copyright (C) 2012-2016 Matt Rude <matt@mattrude.com>
+    Copyright (C) 2012-2018 Matt Rude <matt@mattrude.com>
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
